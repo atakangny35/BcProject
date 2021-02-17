@@ -1,0 +1,60 @@
+﻿@model BcProject.Models.AdminUser
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="contact-main py-5">
+    <div class="container py-md-5">
+        <h3 class="title-w3pvt text-center">Bize Ulaşın</h3>
+        <ul class="list-unstyled row text-center my-5 ">
+            <li class="col-lg-4 adress-info">
+                <div class="adress-w3pvt-inn">
+                    <span class="fa fa-map-marker"></span>
+
+                    <h6>Konum</h6>
+                    <p>
+                        Bilal Çabuk İnşaat
+                        <br>@Model.Adress
+                    </p>
+                </div>
+            </li>
+
+            <li class="col-lg-4 adress-info">
+                <div class="adress-w3pvt-inn">
+                    <span class="fa fa-envelope-open-o"></span>
+
+
+                    <h6>Email</h6>
+                    <a href="mailto:info@example.com">@Model.Mail</a>
+                    <br>
+                    
+                </div>
+
+            </li>
+            <li class="col-lg-4 adress-info">
+                <div class="adress-w3pvt-inn">
+                    <span class="fa fa-mobile"></span>
+
+
+                    <h6>Telefon</h6>
+                    
+                    <p>@Model.Number</p>
+                </div>
+            </li>
+        </ul>
+        <div class="comment-top mt-5 row">
+
+            <div class="map-fo col-lg-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3128.2471709359297!2d27.18117881483762!3d38.366403157020635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBuca%20Koop.%2C%201413.%20Sokak%20no11%2C%20Buca%2F%C4%B0zmir!5e0!3m2!1str!2str!4v1610193770111!5m2!1str!2str" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          
+
+        </div>
+
+
+
+    </div>
+</section>

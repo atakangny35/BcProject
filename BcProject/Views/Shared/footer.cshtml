@@ -1,0 +1,76 @@
+﻿@model BcProject.Models.AdminUser
+
+<footer class="footer-content py-5">
+    <div class="container-fluid py-lg-5 inner-sec-w3ls">
+        <div class="row">
+            <div class="col-lg-5 footer-top mt-md-0 mt-sm-5 pr-lg-5">
+                <h2>
+                    <a class="navbar-brand" href="/Home/Index">
+                        <img src="~/web/images/Footer.jpeg" class="img-fluid" alt="Responsive image">
+
+                    </a>
+                </h2>
+                <p class="my-3"></p>
+
+            </div>
+            <div class="col-lg-4 mt-md-0 mt-5">
+                <div class="footer-w3pvt">
+                    <h3 class="mb-3 w3pvt_title">Sayfalar</h3>
+                    <hr>
+                    <div class="row">
+                        <ul class="col-6 list-info-w3pvt links">
+
+                            <li>
+                                <a href="/home/index">
+                                    Anasayfa
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/home/about">
+                                    Hakkımızda
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Gallery/index">
+                                    Galeri
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/home/contact">
+                                    iletişim
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 mt-lg-0 mt-5">
+                <div class="footer-w3pvt">
+                    <h3 class="mb-3 w3pvt_title">İletişim</h3>
+                    <hr>
+                    <div class="last-w3layouts-contact">
+                        <p>
+                            <a href="mailto:example@email.com">@Model.Mail</a>
+                        </p>
+                    </div>
+                    <div class="last-w3layouts-contact my-2">
+                        <p>+90 @Model.Number</p>
+                    </div>
+                    <div class="last-w3layouts-contact">
+                        <p>
+                           
+                            @Model.Adress
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</footer>

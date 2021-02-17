@@ -1,0 +1,31 @@
+﻿@model BcProject.Models.AdminUpdate
+@{
+    ViewBag.Title = "AdminGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<form action="/Admin/AdminGuncelle" method="post" class="form-group w-75 m-auto">
+    @Html.HiddenFor(x => x.Id)
+
+    @Html.DisplayNameFor(x => x.UserName)
+    @Html.ValidationMessageFor(x => x.UserName)
+    <input type="text" name="UserName" value="@Model.UserName" required class="form-control" />
+    @Html.DisplayNameFor(x => x.Password)
+    @Html.ValidationMessageFor(x => x.Password,null, new { @class = "text-warning" })
+    <input type="password" name="Password" value="@Model.Password" required class="form-control" />
+    @Html.DisplayNameFor(x => x.Mail)
+    @Html.ValidationMessageFor(x => x.Mail)
+    <input type="email" name="Mail" value="@Model.Mail" required class="form-control" />
+    @Html.DisplayNameFor(x => x.Adress)
+    @Html.ValidationMessageFor(x => x.Adress)
+    <input type="text" name="Adress" value="@Model.Adress" required class="form-control" />
+    @Html.DisplayNameFor(x => x.Number)
+    @Html.ValidationMessageFor(x => x.Number)
+    <input type="text" name="Number" value="@Model.Number" required class="form-control" />
+    <br />
+    <button type="submit" class="btn btn-info" value="Login"> Kaydet </button>
+
+</form>
+

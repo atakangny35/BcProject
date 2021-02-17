@@ -1,0 +1,42 @@
+﻿@using BcProject.Models
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<WorkPictureList>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="portfolio py-5" id="gallery">
+
+    <div class="container py-lg-5">
+        <h3 class="title-w3pvt text-center mb-lg-5 mb-3"> Projelerimiz</h3>
+
+        <div class="row news-grids mt-md-5 mt-4 text-center">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 gal-img">
+                    <a href="@item.Picture"><img src="@item.Picture" alt="Presell" class="img-fluid"></a>
+                    <h5 class="gal-info">
+                        <span class="decription">@item.Work.Title</span>
+                    </h5>
+                </div>
+                <br />
+            }
+        </div>
+
+    </div>
+    <div class="ml-5">
+        @Html.PagedListPager((IPagedList)Model, Page => Url.Action("Index", new { Page }), new PagedListRenderOptions
+    {
+
+        LiElementClasses = new List<string>
+        {"page-link"}
+
+
+    }
+
+    )
+    </div>
+</section>

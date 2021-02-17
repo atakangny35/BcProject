@@ -1,0 +1,45 @@
+﻿@using BcProject.Models
+@model IEnumerable<ProjectListModel>
+@{
+    ViewBag.Title = "Project";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x=>x.Title)</th>
+            
+        
+       
+            <th>@Html.DisplayNameFor(x => x.Description)</th>
+            
+       
+            <th>Fotoğraf</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+            
+       
+       
+        
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td><a href="/Admin/EkleFoto/@item.Id" class="btn btn-sm btn-warning">fotoğraf ekle</a></td>
+                <td><a href="/Admin/GuncelleProje/@item.Id" class="btn btn-sm btn-warning">Güncelle</a></td>
+                <td><a href="/Admin/Sil/@item.Id" class="btn btn-sm btn-danger">Sil</a></td>
+                
+                
+            </tr>
+
+        }
+    </tbody>
+</table>
+<td><a href="/Admin/EkleProje" class="btn  btn-default" style="background-color:black; color:white">Ekle</a></td>

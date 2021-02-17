@@ -1,0 +1,35 @@
+﻿@model BcProject.Models.AdminUser
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <link href="~/web/css/bootstrap.css" rel="stylesheet" />
+   
+</head>
+
+<body>
+    
+    <form action="/Login/Index" method="post" class="form-group w-75 m-auto" >
+
+        <label >Kullanıcı adı</label>
+        <input type="text" name="UserName" value=""  required class="form-control"/>
+        <label>Şifre</label>
+        <input type="password" name="Password" value=""  required class="form-control"/>
+        <br />
+        <button  type="submit" class="btn btn-info" value="Login"> Giriş yap</button>
+
+    </form>
+
+
+
+    <script src="~/web/Jqueary/jquery.min.js"></script>
+    <script src="~/web/js/bootstrap.js"></script>
+</body>
+</html>

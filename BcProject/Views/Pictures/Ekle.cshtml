@@ -1,0 +1,18 @@
+﻿@model BcProject.Models.WorkPictureList
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form action="/Pictures/Ekle" method="post" class="form-group w-75 m-auto">
+
+    @Html.DisplayNameFor(x => x.Picture)
+    <input type="text" name="Picture" value="" required class="form-control" />
+    @Html.DisplayNameFor(x => x.WorksId)
+    @Html.DropDownListFor(i => i.WorksId, (List<SelectListItem>)ViewBag.ktgid, new { @class = "form-control" } )
+
+
+    <br />
+    <button type="submit" class="btn btn-info" value="Login"> Kaydet </button>
+
+</form>

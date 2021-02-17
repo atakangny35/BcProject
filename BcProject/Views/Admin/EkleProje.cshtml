@@ -1,0 +1,19 @@
+﻿@model BcProject.Models.ProjectAddModel
+@{
+    ViewBag.Title = "EkleProje";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form action="/Admin/EkleProje" method="post" class="form-group w-75 m-auto">
+
+    @Html.DisplayNameFor(x => x.Title)
+    <input type="text" name="Title" value="" required class="form-control" />
+    @Html.DisplayNameFor(x => x.Description)
+    <input type="text" name="Description" value="" required class="form-control" />
+    @Html.DisplayNameFor(x => x.MenuPicture)
+    <input type="text" name="MenuPicture" value="" required class="form-control" />
+    <br />
+    <button type="submit" class="btn btn-info" value="Login"> Kaydet </button>
+
+</form>
+

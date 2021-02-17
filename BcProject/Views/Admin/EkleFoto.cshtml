@@ -1,0 +1,19 @@
+﻿@model BcProject.Models.WorkPictureList
+
+@{
+    ViewBag.Title = "EkleFoto";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form action="/Admin/EkleFoto" method="post" class="form-group w-75 m-auto">
+
+    @Html.DisplayNameFor(x => x.Picture)
+    <input type="text" name="Picture" value="" required class="form-control" />
+
+    @Html.HiddenFor(i => i.WorksId, htmlAttributes: new { @Value = ViewBag.Id })
+
+    <br />
+    <button type="submit" class="btn btn-info" value="Login"> Kaydet </button>
+
+</form>
+

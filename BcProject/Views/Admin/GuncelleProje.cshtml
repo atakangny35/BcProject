@@ -1,0 +1,21 @@
+﻿@model BcProject.Models.ProjectUpdateModel
+@{
+    ViewBag.Title = "GuncelleProje";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form action="/Admin/GuncelleProje" method="post" class="form-group w-75 m-auto">
+    @Html.HiddenFor(x=>x.Id)
+   
+    @Html.DisplayNameFor(x => x.Title)
+    @Html.ValidationMessageFor(x=>x.Title)
+    <input type="text" name="Title" value="@Model.Title" required  class="form-control" />
+    @Html.DisplayNameFor(x => x.Description)
+    <input type="text" name="Description" value="@Model.Description" required class="form-control" />
+    @Html.DisplayNameFor(x => x.MenuPicture)
+    <input type="text" name="MenuPicture" value="@Model.MenuPicture" required class="form-control" />
+    <br />
+    <button type="submit" class="btn btn-info" value="Login"> Kaydet </button>
+
+</form>
+
